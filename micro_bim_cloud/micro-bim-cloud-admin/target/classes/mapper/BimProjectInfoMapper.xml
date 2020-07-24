@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.cloud.mapper.BimProjectInfoMapper">
+
+  <select id="selectByCorpId" parameterType="java.lang.String" resultType="com.micro.cloud.model.BimProjectInfo">
+    select * from bim_project_info where corp_id = #{corpId}
+  </select>
+
+  <insert id="insertSelective" parameterType="com.micro.cloud.model.BimProjectInfo" useGeneratedKeys="true" keyProperty="id">
+    insert into bim_project_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="projectName != null">
+        project_name,
+      </if>
+      <if test="corpId != null">
+        corp_id,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="actualStartTime != null">
+        actual_start_time,
+      </if>
+      <if test="actualEndTime != null">
+        actual_end_time,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="projectName != null">
+        #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="corpId != null">
+        #{corpId,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="actualStartTime != null">
+        #{actualStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="actualEndTime != null">
+        #{actualEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.micro.cloud.model.BimProjectInfo">
+    update bim_project_info
+    <set>
+      <if test="projectName != null">
+        project_name = #{projectName,jdbcType=VARCHAR},
+      </if>
+      <if test="corpId != null">
+        corp_id = #{corpId,jdbcType=VARCHAR},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="actualStartTime != null">
+        actual_start_time = #{actualStartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="actualEndTime != null">
+        actual_end_time = #{actualEndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+</mapper>

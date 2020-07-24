@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.cloud.mapper.BimModelHistoryMapper">
+    <sql id="allInfo">
+        id,user_id,corp_id,model_id,time
+    </sql>
+
+    <delete id="resetModelHistory">
+        delete from bim_model_history
+        where corp_id = #{corpId} and user_id = #{userId}
+    </delete>
+
+    <delete id="deleteModelHistory">
+        delete from bim_model_history
+        where corp_id = #{corpId} and user_id = #{userId} and model_id = #{modelId}
+    </delete>
+
+    <select id="listModelHistory" resultType="com.micro.cloud.model.BimModelTree">
+
+        select m.id,m.node_name,m.upload_from,m.user_name,m.create_time
+        from bim_model_tree m left join bim_model_history h
+        on m.id=h.model_id and m.corp_id=h.corp_id
+        where h.corp_id = #{corpId} and h.user_id = '0' and m.enable = 1
+        order by h.time desc limit 20
+
+    </select>
+
+    <select id="isModelHistoryExist" resultType="java.lang.Integer">
+        select count(*)
+        from bim_model_history
+        where corp_id = #{corpId} and user_id = #{userId} and model_id = #{modelId}
+        limit 1
+    </select>
+
+    <insert id="insertModelHistory">
+        insert into bim_model_history(user_id, corp_id, model_id)
+        values (#{userId}, #{corpId}, #{modelId})
+    </insert>
+
+    <update id="updateModelHistorty">
+        update bim_model_history
+        set time = CURRENT_TIMESTAMP
+        where corp_id = #{corpId} and user_id = #{userId} and model_id = #{modelId}
+    </update>
+
+</mapper>

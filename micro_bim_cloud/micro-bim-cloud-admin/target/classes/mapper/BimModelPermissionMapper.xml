@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.cloud.mapper.BimModelPermissionMapper">
+
+    <sql id="simpleInfo">
+        corp_id, node_id, node_type, user_not_allow, creator_user_id, creator_name,type
+    </sql>
+
+    <insert id="insertPermission" parameterType="com.micro.cloud.model.BimModelPermission">
+        insert into bim_model_tree_permission(corp_id,node_id,node_type,user_not_allow,creator_name,creator_user_id,type)
+        values(#{corpId},#{nodeId},#{nodeType},#{userNotAllow},#{creatorName},#{creatorUserId},#{type})
+    </insert>
+
+    <update id="updatePermissionByDirectoryId" parameterType="com.micro.cloud.model.BimModelPermission">
+        update bim_model_tree_permission
+        set user_not_allow = #{userNotAllow}
+        where node_id = #{nodeId}
+    </update>
+
+    <delete id="deletePermissionByNodeId">
+        delete from bim_model_tree_permission
+        where node_id = #{nodeId}
+    </delete>
+
+    <select id="getPermissionListByCorpId" resultType="com.micro.cloud.model.BimModelPermission">
+        select <include refid="simpleInfo"/>
+        from bim_model_tree_permission
+        where corp_id = #{corpId} and node_type = 0 and status = 1
+    </select>
+
+    <select id="findPermission" resultType="com.micro.cloud.model.BimModelPermission">
+        select <include refid="simpleInfo"/>
+        from bim_model_tree_permission
+        where node_id = #{nodeId} and status = 1
+    </select>
+
+    <select id="verifyExist" resultType="java.lang.Integer">
+        select count(*) from bim_model_tree_permission where node_id = #{nodeId} and status = 1
+    </select>
+
+</mapper>

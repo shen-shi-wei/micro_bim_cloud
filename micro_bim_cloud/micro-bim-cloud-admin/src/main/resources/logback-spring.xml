@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+    <!-- 日志级别从低到高分为TRACE < DEBUG < INFO < WARN < ERROR < FATAL，如果设置为WARN，则低于WARN的信息都不会输出 -->
+    <!--应用名称-->
+    <property name="CONTEXT_NAME" value="micro-bim-cloud"/>
+    <!--日志文件保存路径-->
+    <property name="LOG_FILE_PATH" value="/springboot.logs/microcloud/admin}"/>
+    <!--日志输出信息编码方式-->
+    <property name="LOG_CHARSET" value="UTF-8"/>
+    <!--上下文名称-->
+    <contextName>${CONTEXT_NAME}</contextName>
+
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
+        <!--layout 和 encoder ，都可以将事件转换为格式化后的日志记录，但是控制台输出使用 layout ，文件输出使用 encoder-->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </layout>
+        <!--ThresholdFilter为系统定义的拦截器，例如我们用ThresholdFilter来过滤掉INFO级别以下的日志不输出到文件中-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>info</level>
+        </filter>
+    </appender>
+
+    <!--每天记录debug日志到文件appender-->
+    <appender name="fileDebugLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>debug</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE_PATH}/debug.${CONTEXT_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!--每天记录info日志到文件appender-->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>info</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE_PATH}/info.${CONTEXT_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!--每天记录warn日志到文件appender-->
+    <appender name="fileWarnLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>warn</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE_PATH}/warn.${CONTEXT_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!--每天记录error日志到文件appender-->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>error</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE_PATH}/error.${CONTEXT_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+            <charset>${LOG_CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!--输出到logstash的appender-->
+    <!--<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:4560</destination>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>-->
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+
+    <springProfile name="dev">
+        <logger name="com.micro.cloud" level="debug" additivity="false">
+            <appender-ref ref="fileDebugLog" />
+            <appender-ref ref="fileInfoLog" />
+            <appender-ref ref="fileWarnLog" />
+            <appender-ref ref="fileErrorLog" />
+        </logger>
+        <!--SQL语句相关的日志暂时不打印，太多了，本地有需要再开启打印-->
+        <!--<logger name="org.mybatis" level="debug" additivity="false">
+            <appender-ref ref="fileDebugLog" />
+        </logger>
+        <logger name="com.micro.cloud.dao" level="debug" additivity="false">
+            <appender-ref ref="fileDebugLog" />
+        </logger>-->
+    </springProfile>
+
+    <springProfile name="prod">
+        <!--<root level="info">
+            <appender-ref ref="fileInfoLog" />
+            <appender-ref ref="fileWarnLog" />
+            <appender-ref ref="fileErrorLog" />
+        </root>-->
+        <logger name="com.micro.cloud" level="info" additivity="false">
+            <appender-ref ref="fileInfoLog" />
+            <appender-ref ref="fileWarnLog" />
+            <appender-ref ref="fileErrorLog" />
+        </logger>
+    </springProfile>
+</configuration>

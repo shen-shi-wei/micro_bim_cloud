@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.cloud.mapper.BimModelTreeMapper">
+
+    <select id="selectTopDirectory" parameterType="com.micro.cloud.model.BimModelTree" resultType="com.micro.cloud.model.BimModelTree">
+        select id,node_name,node_type,parent_id,corp_id,user_id,user_name,upload_status,upload_from,create_time,update_time from bim_model_tree
+        where corp_id = #{corpId} and enable = 1 and node_type = 0 and parent_id = 0
+    </select>
+
+    <select id="selectSubDirectoryAndModelByParentId" parameterType="java.lang.String" resultType="com.micro.cloud.model.BimModelTree">
+        select id,node_name,node_type,parent_id,corp_id,user_id,user_name,upload_status,upload_from,create_time,update_time
+        from bim_model_tree where enable = 1 and parent_id = #{parentId}
+    </select>
+
+    <select id="selectSubNameInfoByParentId" parameterType="java.lang.String" resultType="com.micro.cloud.model.BimModelTree">
+        select node_name,node_type,upload_from from bim_model_tree where enable = 1 and parent_id = #{parentId}
+    </select>
+
+    <select id="selectSubIdInfoByBatchParentId" parameterType="java.lang.String" resultType="com.micro.cloud.model.BimModelTree">
+        select id,node_type from bim_model_tree where enable = 1 and parent_id in (${parentIds})
+    </select>
+
+    <select id="verifyNodeName" parameterType="com.micro.cloud.model.BimModelTree" resultType="com.micro.cloud.model.BimModelTree">
+        select node_name from bim_model_tree
+        where parent_id = #{parentId} and node_type = #{nodeType}
+        <if test="nodeType == 1">
+            and upload_from = #{uploadFrom}
+        </if>
+        and enable = 1 and node_name = #{nodeName}
+        <if test="id != null">
+            and id != #{id}
+        </if>
+    </select>
+
+    <update id="modifyNodeName" parameterType="com.micro.cloud.model.BimModelTree">
+        update bim_model_tree set node_name = #{nodeName} where id = #{id}
+    </update>
+
+    <update id="deleteNode" parameterType="com.micro.cloud.model.BimModelTree">
+        update bim_model_tree set enable = 0 where id = #{id}
+    </update>
+
+    <update id="deleteNodeBatch" parameterType="java.lang.String">
+        update bim_model_tree set enable = 0 where id in (${ids})
+    </update>
+
+    <update id="moveNode" parameterType="com.micro.cloud.model.BimModelTree">
+        update bim_model_tree set parent_id = #{parentId}, node_name = #{nodeName} where id = #{id}
+    </update>
+
+    <select id="selectById" parameterType="com.micro.cloud.model.BimModelTree" resultType="com.micro.cloud.model.BimModelTree">
+        select id,node_name,node_type,parent_id,corp_id,user_id,user_name,file_type,base_url,
+               file3d_url,file2d_url,file2d_name,upload_status,upload_from,create_time,update_time,enable
+        from bim_model_tree where id = #{id}
+    </select>
+
+    <insert id="insertSelective" parameterType="com.micro.cloud.model.BimModelTree" useGeneratedKeys="true" keyProperty="id">
+        insert into bim_model_tree
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="nodeName != null">
+                node_name,
+            </if>
+            <if test="nodeType != null">
+                node_type,
+            </if>
+            <if test="parentId != null">
+                parent_id,
+            </if>
+            <if test="corpId != null">
+                corp_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="fileType != null">
+                file_type,
+            </if>
+            <if test="baseUrl != null">
+                base_url,
+            </if>
+            <if test="file3dUrl != null">
+                file3d_url,
+            </if>
+            <if test="uploadStatus != null">
+                upload_status,
+            </if>
+            <if test="uploadFrom != null">
+                upload_from,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="enable != null">
+                enable,
+            </if>
+            <if test="file2dUrl != null">
+                file2d_url,
+            </if>
+            <if test="file2dName != null">
+                file2d_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="nodeName != null">
+                #{nodeName,jdbcType=VARCHAR},
+            </if>
+            <if test="nodeType != null">
+                #{nodeType,jdbcType=INTEGER},
+            </if>
+            <if test="parentId != null">
+                #{parentId,jdbcType=BIGINT},
+            </if>
+            <if test="corpId != null">
+                #{corpId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="fileType != null">
+                #{fileType,jdbcType=INTEGER},
+            </if>
+            <if test="baseUrl != null">
+                #{baseUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="file3dUrl != null">
+                #{file3dUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="uploadStatus != null">
+                #{uploadStatus,jdbcType=INTEGER},
+            </if>
+            <if test="uploadFrom != null">
+                #{uploadFrom,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=VARCHAR},
+            </if>
+            <if test="enable != null">
+                #{enable,jdbcType=INTEGER},
+            </if>
+            <if test="file2dUrl != null">
+                #{file2dUrl,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="file2dName != null">
+                #{file2dName,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+</mapper>

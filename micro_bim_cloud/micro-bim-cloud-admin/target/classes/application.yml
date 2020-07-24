@@ -1,0 +1,66 @@
+spring:
+  jmx:
+    default-domain: micro-bim-cloud-admin
+  profiles:
+    active: dev #默认为开发环境
+  jta:
+    atomikos:
+      datasource:
+        borrow-connection-timeout: 60
+        max-pool-size: 40
+        min-pool-size: 10
+      connectionfactory:
+        borrow-connection-timeout: 60
+        max-pool-size: 40
+        min-pool-size: 10
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath*:com/**/mapper/*.xml
+  type-aliases-package: com.micro.cloud.model
+  configuration:
+    #此处可能会不生效，还要配一些其他配置...
+    map-underscore-to-camel-case: true
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mySecret #JWT加解密使用的密钥
+  expiration: 604800 #JWT的超期限时间(60*60*24)
+  tokenHead: Bearer  #JWT负载中拿到开头
+
+aliyun:
+  oss:
+    endpoint: oss-cn-shenzhen.aliyuncs.com # oss对外服务的访问域名
+    accessKeyId: test # 访问身份验证中用到用户标识
+    accessKeySecret: test # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
+    bucketName: macro-oss # oss的存储空间
+    policy:
+      expire: 300 # 签名有效期(S)
+    maxSize: 10 # 上传文件大小(M)
+    callback: http://39.98.190.128:8080/aliyun/oss/callback # 文件上传成功后的回调地址
+    dir:
+      prefix: mall/images/ # 上传文件夹路径前缀
+
+# 自定义redis key
+redis:
+  key:
+    prefix:
+      authCode: "microcloud:authCode:"
+      jsapiCode: "microcloud:jsapiCode:"
+    expire:
+      offset: 300
+
+logging:
+  level:
+    root: info #日志配置DEBUG,INFO,WARN,ERROR
+    com.micro.cloud: debug
+
+com:
+  document:
+    docx: pdf、doc、docx、ppt、pptx、xls、xlsx、txt #文档
+    zip: RAR、zip #压缩
+    pic: Webp、BMP、PCX、TIF、GIF、JPG、JPEG、TGA、EXIF、FPX、SVG、PSD、CDR、PCD、DXF、UFO、EPS、AI、PNG、HDRI、RAW、WMF、FLIC、EMF、ICO #图片
+    video: wmv、asf、asx、rm、 rmvb、mp4、3gp、mov、m4v、avi、dat、mkv、flv、vob #视频
+    mp3: mp3、wma、ra、mov、wav、mid、amr #语音
+    exe: apk、ipa、exe #应用

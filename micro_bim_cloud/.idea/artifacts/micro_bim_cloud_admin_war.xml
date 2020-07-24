@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="micro-bim-cloud-admin:war">
+    <output-path>$PROJECT_DIR$/micro-bim-cloud-admin/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>micro-bim-cloud-admin</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="micro-bim-cloud-admin-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="micro-bim-cloud-admin:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.micro.cloud.mapper.DingDocumentDoMapper">
+  <resultMap id="BaseResultMap" type="com.micro.cloud.model.DingDocumentDo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="doc_type" jdbcType="INTEGER" property="docType" />
+    <result column="doc_name" jdbcType="VARCHAR" property="docName" />
+    <result column="space_id" jdbcType="VARCHAR" property="spaceId" />
+    <result column="file_id" jdbcType="VARCHAR" property="fileId" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="file_size" jdbcType="BIGINT" property="fileSize" />
+    <result column="file_type" jdbcType="VARCHAR" property="fileType" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="chunk_numbers" jdbcType="BIGINT" property="chunkNumbers" />
+  </resultMap>
+  <sql id="Base_Column_List">
+     parent_id, doc_type, doc_name, space_id, file_id, file_name, file_size, file_type, create_time
+  </sql>
+
+  <!--  文档展示首页或者某个文件夹下所有文件夹跟文件  -->
+  <select id="showDocument" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    select * from doc_info where is_delete = 0 and parent_id = #{parentId} and corp_id = #{corpId}
+    <if test="docName != null">
+      and doc_name like '%${docName}%'
+    </if>
+    order by doc_type ASC
+    <if test="orderType == 0">
+      ,doc_name ASC
+    </if>
+    <if test="orderType == 1">
+      ,create_time desc
+    </if>
+  </select>
+
+  <!-- 查找有权限可看的数据 -->
+  <select id="findAllPersionDataByParentId" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    SELECT DISTINCT a.* FROM (
+		select * from doc_info where is_delete = 0 and parent_id = #{parentId} and is_look = 1 and corp_id = #{corpId}
+        union all select * from doc_info where id in (select doc_id from user_doc_permission where user_id = #{userId}) and parent_id = #{parentId} and corp_id = #{corpId}
+    )a
+    order by doc_type ASC
+    <if test="orderType == 0">
+      ,doc_name ASC
+    </if>
+    <if test="orderType == 1">
+      ,create_time desc
+    </if>
+  </select>
+
+  <insert id="addDocument" parameterType="com.micro.cloud.model.DingDocumentDo">
+    insert into doc_info(parent_id, user_id, user_name, corp_id, doc_type, doc_name, space_id, file_id, file_name, file_size, file_type, chunk_numbers,file_md5,uuid)
+    values (#{parentId},#{userId},#{userName},#{corpId},#{docType},#{docName},#{spaceId},#{fileId},#{fileName},#{fileSize},#{fileType},#{chunkNumbers},#{fileMd5},#{uuid})
+  </insert>
+
+  <sql id="update_set">
+    <if test="parentId != null">
+      parent_id = #{parentId},
+    </if>
+    <if test="docName != null">
+      doc_name = #{docName},
+    </if>
+    <if test="createTime != null">
+      create_time = #{createTime},
+    </if>
+  </sql>
+
+  <update id="modifyDocument" parameterType="com.micro.cloud.model.DingDocumentDo" >
+    update doc_info
+     <set>
+       <include refid="update_set"></include>
+     </set>
+     where id = #{id}
+  </update>
+
+  <update id="deleteDocument" parameterType="com.micro.cloud.model.DingDocumentDo">
+    update doc_info set is_delete = 1 where id in (${docId})
+  </update>
+
+  <select id="selectByUuid" parameterType="string" resultType="com.micro.cloud.model.DingDocumentDo">
+    select * from doc_info where uuid = #{uuid}
+  </select>
+
+  <select id="showHistory" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    select a.doc_id,a.user_id,a.history_time,b.* from user_doc_history a left join doc_info b on a.doc_id = b.id
+    where a.user_id = #{userId} and b.is_delete = 0 and b.corp_id = #{corpId} order by a.history_time desc LIMIT 0,20
+  </select>
+
+  <delete id="deleteHistory"  parameterType="com.micro.cloud.model.DingDocumentDo">
+    delete from user_doc_history where user_id = #{userId} and corp_id = #{corpId}
+  </delete>
+
+  <insert id="modifyHistory" parameterType="com.micro.cloud.model.DingDocumentDo">
+    insert into user_doc_history(user_id,doc_id,corp_id,history_time) values (#{userId},#{docId},#{corpId},#{historyTime})
+  </insert>
+
+  <select id="screenDocument" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    select * from doc_info where is_delete = 0 and doc_type = 1 and file_type in (${fileType}) and id in (${docId}) and corp_id = #{corpId} order by doc_name ASC
+  </select>
+
+  <update id="setAllPersonCanLook" parameterType="com.micro.cloud.model.DingDocumentDo">
+    update doc_info set is_look = 1 where id in (${docId})
+  </update>
+
+  <select id="getChildList" parameterType="int" resultType="com.micro.cloud.model.DingDocumentDo">
+    select id from doc_info where FIND_IN_SET(id,getChildList(${id}))
+  </select>
+
+  <select id="selectPermissionByDocId" parameterType="com.micro.cloud.model.DingDocumentDo">
+    SELECT user_id,permission from user_doc_permission where user_id =#{userId} and doc_id = #{docId} and corp_id = #{corpId} order by permission ASC
+  </select>
+
+  <insert id="addPermissionToDoc" parameterType="com.micro.cloud.model.DingDocumentDo">
+    insert into user_doc_permission(user_id,doc_id,corp_id,permission,is_creator) values (#{userId},#{docId},#{corpId},#{permission},#{isCreator})
+  </insert>
+
+  <update id="modifyPermissionToDoc" parameterType="com.micro.cloud.model.DingDocumentDo">
+    update user_doc_permission set permission = #{permission} where user_id =#{userId} and doc_id = #{docId} and corp_id = #{corpId}
+  </update>
+
+  <delete id="deletePermissionToDoc" parameterType="com.micro.cloud.model.DingDocumentDo">
+    delete from user_doc_permission where user_id =#{userId} and doc_id = #{docId} and corp_id = #{corpId}
+  </delete>
+
+  <select id="selectAllByName" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    SELECT a.* FROM doc_info a LEFT JOIN user_doc_permission b ON a.id = b.doc_id
+    WHERE b.user_id = #{userId} and a.corp_id = #{corpId} and a.parent_id = #{parentId} AND a.doc_name = #{docName} or
+		a.doc_name like '${docName}(_)'
+		or a.doc_name like '${docName}(__)'
+		or a.doc_name like '${docName}(___)'
+		or a.doc_name like '${docName}(____)' ORDER BY a.doc_name DESC
+  </select>
+
+  <select id="checkMd5" parameterType="com.micro.cloud.model.DingDocumentDo" resultType="com.micro.cloud.model.DingDocumentDo">
+    select * from doc_info where file_md5= #{fileMd5}
+  </select>
+
+
+
+
+
+
+</mapper>

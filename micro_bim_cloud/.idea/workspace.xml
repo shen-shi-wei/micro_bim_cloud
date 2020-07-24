@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb59ef61-4257-49bc-827a-03c89e1d4236" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/micro-bim-cloud-admin/target/" />
+    <ignored path="$PROJECT_DIR$/micro-bim-cloud-common/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/micro-bim-cloud-mbg/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/CommonResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/IErrorCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/LogFormatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/ResultCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/generator/generator.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/generator/generatorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="694">
+              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="225">
+                <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>docId</find>
+      <find>and corp_id = #{corpId}</find>
+      <find>deletePermissionToDoc</find>
+      <find>selectPermissionByDocId</find>
+      <find>is_creator</find>
+      <find>addPermissionToDoc</find>
+      <find>@value</find>
+      <find>FileType</find>
+      <find>doc</find>
+      <find>@Value</find>
+      <find>docx</find>
+      <find>FileItem</find>
+      <find>files</find>
+      <find>getOapiFileUploadTransactionResponse</find>
+      <find>code</find>
+      <find>URLEncoder.encode</find>
+      <find>return null</find>
+      <find>WebUtils.buildQuery(r</find>
+      <find>if (response != null</find>
+      <find>URLEncoder.encode(</find>
+      <find>CommonsMultipartFile</find>
+      <find>OapiFileUploadTransactionResponse</find>
+      <find>免登码</find>
+      <find>文档页面搜索后，返回是保存搜索结果</find>
+      <find>findAllPersionDataByParentId</find>
+      <find>module</find>
+      <find>dependencyManagement</find>
+      <find>RequestParam</find>
+      <find>showDocument</find>
+      <find>media_id</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>，</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/dao/DingDingDocumentMapper.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/dao/DingDingDocumentDao.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/dao/DingDingDocumentDao.xml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/dto/DingDingDocument.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/config/GlobalCorsConfig.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/config/UploadFileConfig.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/pom.xml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/CommonResult.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/DingPanSuffixConstants.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/mapper/DingDocumentDoMapper.java" />
+        <option value="$PROJECT_DIR$/document/sql/document.sql" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/model/DingDocumentDo.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/DingTalkUrlConstants.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/dingtalk/impl/DingTalkDingPanServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../ecology/docs/search/DocCommonContent_js.jsp" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/resources/com/micro/cloud/mapper/DingDocumentDoMapper.xml" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/DingDocumentController.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/DingDocumentService.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/impl/DingDocumentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/Main.java" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/Generator.java" />
+        <option value="$PROJECT_DIR$/README-DEV.md" />
+        <option value="$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/generator/generator.properties" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="11" />
+    <option name="y" value="29" />
+    <option name="width" value="1862" />
+    <option name="height" value="981" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-bim-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro_bim_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="micro-bim-cloud-mbg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="MySQL" />
+    <property name="last_opened_file_path" value="D:/gitlib/micro_bim_cloud" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitlib\micro_bim_cloud\micro-bim-cloud-admin\src\main\resources\dao" />
+      <recent name="D:\gitlib\micro_bim_cloud\micro-bim-cloud-admin\src\main\java\com\micro\cloud\service\dingtalk" />
+      <recent name="D:\gitlib\micro_bim_cloud\micro-bim-cloud-admin\src\main\java\com\micro\cloud\service\dingtalk\impl" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.micro.cloud.Generator" />
+      <module name="micro-bim-cloud-mbg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.micro.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.micro.cloud.Main" />
+      <module name="micro-bim-cloud-mbg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.micro.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MicroCloudAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="micro-bim-cloud-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.micro.cloud.MicroCloudAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb59ef61-4257-49bc-827a-03c89e1d4236" name="Default Changelist" comment="" />
+      <created>1572312666021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572312666021</updated>
+      <workItem from="1572312669241" duration="7681000" />
+      <workItem from="1572320618583" duration="57488000" />
+      <workItem from="1572500608898" duration="32990000" />
+      <workItem from="1572852716405" duration="11282000" />
+      <workItem from="1572944753021" duration="3597000" />
+      <workItem from="1573001970302" duration="47536000" />
+      <workItem from="1573453758890" duration="32197000" />
+      <workItem from="1573608371418" duration="3835000" />
+      <workItem from="1573626568184" duration="3760000" />
+      <workItem from="1573697646607" duration="13601000" />
+      <workItem from="1573811831450" duration="579000" />
+      <workItem from="1574054949057" duration="6439000" />
+      <workItem from="1574230726920" duration="600000" />
+      <workItem from="1576049898901" duration="642000" />
+      <workItem from="1576050590782" duration="591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="222818000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="11" y="29" width="1862" height="981" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20754717" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3286334" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3340564" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.324295" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.324295" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>document.getUserId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new FileItem(file_name,stream)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new FileItem(&quot;sdfh&quot;, changeMultipartFileToInputStream(files[0]))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>changeMultipartFileToInputStream(files[0])</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>files[0]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new FileItem(&quot;sdfh&quot;, changeMultipartFileToInputStream(files[0])) 
+    @Override
+    public FileItemHeaders getHeaders() {
+        return null;
+    }
+
+    @Override
+    public void setHeaders(FileItemHeaders fileItemHeaders) {
+
+    }
+
+    @Override
+    public InputStream getInputStream() throws IOException {
+        return null;
+    }
+
+    @Override
+    public String getContentType() {
+        return null;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public boolean isInMemory() {
+        return false;
+    }
+
+    @Override
+    public long getSize() {
+        return 0;
+    }
+
+    @Override
+    public byte[] get() {
+        return new byte[0];
+    }
+
+    @Override
+    public String getString(String s) throws UnsupportedEncodingException {
+        return null;
+    }
+
+    @Override
+    public String getString() {
+        return null;
+    }
+
+    @Override
+    public void write(File file) throws Exception {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public String getFieldName() {
+        return null;
+    }
+
+    @Override
+    public void setFieldName(String s) {
+
+    }
+
+    @Override
+    public boolean isFormField() {
+        return false;
+    }
+
+    @Override
+    public void setFormField(boolean b) {
+
+    }
+
+    @Override
+    public OutputStream getOutputStream() throws IOException {
+        return null;
+    }
+} 
+    @Override
+    public FileItemHeaders getHeaders() {
+        return null;
+    }
+
+    @Override
+    public void setHeaders(FileItemHeaders fileItemHeaders) {
+
+    }
+
+    @Override
+    public InputStream getInputStream() throws IOException {
+        return null;
+    }
+
+    @Override
+    public String getContentType() {
+        return null;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public boolean isInMemory() {
+        return false;
+    }
+
+    @Override
+    public long getSize() {
+        return 0;
+    }
+
+    @Override
+    public byte[] get() {
+        return new byte[0];
+    }
+
+    @Override
+    public String getString(String s) throws UnsupportedEncodingException {
+        return null;
+    }
+
+    @Override
+    public String getString() {
+        return null;
+    }
+
+    @Override
+    public void write(File file) throws Exception {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public String getFieldName() {
+        return null;
+    }
+
+    @Override
+    public void setFieldName(String s) {
+
+    }
+
+    @Override
+    public boolean isFormField() {
+        return false;
+    }
+
+    @Override
+    public void setFormField(boolean b) {
+
+    }
+
+    @Override
+    public OutputStream getOutputStream() throws IOException {
+        return null;
+    }
+}</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.apache.commons.fileupload.FileItem,java.io.File,java.io.OutputStream,org.apache.commons.fileupload.FileItemHeaders</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>document.getId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>corpId</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dingDingProperties.getCorpId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/SortConstants.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/GenerateNameRule.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/DingTalkRoleConstants.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/util/JwtTokenUtil.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/config/SecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/document/sql/document.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/BimProjectInfoController.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/BimModelShareController.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/BimModelHistoryController.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/BimUserModelSortController.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/BimModelController.java" />
+    <entry file="jar://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/WEB-INF/lib/taobao-sdk-java-auto_1479188381469-20191021.jar!/com/dingtalk/api/DefaultDingTalkClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/dingtalk/DingTalkDingPanService.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/config/UploadFileConfig.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/dingtalk/impl/DingTalkDingPanServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/constants/DingTalkUrlConstants.java" />
+    <entry file="jar://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/WEB-INF/lib/taobao-sdk-java-auto_1479188381469-20191021.jar!/com/dingtalk/api/request/OapiFileUploadSingleRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/WEB-INF/lib/taobao-sdk-java-auto_1479188381469-20191021.jar!/com/taobao/api/FileItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/alibaba-dd.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/比较ecology/git/classbean/weaver/file/FileDownload.class" />
+    <entry file="file://$PROJECT_DIR$/../ecology/classbean/weaver/file/FileDownload.class" />
+    <entry file="file://D:/比较ecology/ecology/classbean/weaver/file/FileDownload.class" />
+    <entry file="file://D:/比较ecology/ecology/classbean/weaver/license/PluginLicense.class" />
+    <entry file="file://$PROJECT_DIR$/../ecology/classbean/weaver/license/PluginLicense.class" />
+    <entry file="file://$PROJECT_DIR$/../ecology/docs/search/DocCommonContent_js.jsp" />
+    <entry file="file://D:/比较ecology/ecology/classbean/weaver/license/PluginLicenseForInterface.class" />
+    <entry file="file://$PROJECT_DIR$/../ecology/classbean/weaver/license/PluginLicenseForInterface.class" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/Generator.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/mapper/DingDocumentDoMapper.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/resources/com/micro/cloud/mapper/DingDocumentDoMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/DingDocumentService.java" />
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.1.3.RELEASE/spring-boot-starter-web-2.1.3.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-mbg/src/main/java/com/micro/cloud/model/DingDocumentDo.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/service/impl/DingDocumentServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/java/com/micro/cloud/controller/DingDocumentController.java" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/README-DEV.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/CommonPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/CommonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/IErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/LogFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-common/src/main/java/com/micro/cloud/common/api/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/generator/generator.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/micro-bim-cloud-admin/src/main/resources/generator/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>micro-bim-cloud-admin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
